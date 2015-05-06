@@ -319,7 +319,7 @@ class Yumpu {
 		
         return $this->executeRequest($params);
 	}
-	
+
 	
 /* SECTION */ 
 	
@@ -500,6 +500,22 @@ class Yumpu {
 		
         return $this->executeRequest($params);
 	}
+
+    /**
+     * retrieve all users' medias datas
+     * more details on: http://developers.yumpu.com/api/medias/get/
+     *
+     * @return array|json
+     */
+    public function getMedias($data = array()){
+        $params = array(
+            'action' => 'medias/get',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
 
 	/** 
      * execute a CURL request to Yumpu
