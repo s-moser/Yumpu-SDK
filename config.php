@@ -48,6 +48,7 @@ $config['yumpuEndpoints'] = array(
 	'categories/get' => $config['endpointDomain'].'document/categories.json',
 	'countries/get' => $config['endpointDomain'].'countries.json',
 	'languages/get' => $config['endpointDomain'].'document/languages.json',
-	'search/get' => $config['endpointSearchDomain'].'search.json'
+	'search/get' => $config['endpointSearchDomain'].'search.json',
+    'medias/get' => $config['endpointSearchDomain'].'medias.json'
 );
 ?>

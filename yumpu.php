@@ -505,6 +505,8 @@ class Yumpu {
      * retrieve all users' medias datas
      * more details on: http://developers.yumpu.com/api/medias/get/
      *
+     * @param array $data
+     *
      * @return array|json
      */
     public function getMedias($data = array()){
