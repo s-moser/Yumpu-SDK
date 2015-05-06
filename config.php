@@ -15,7 +15,7 @@
 $config = array(
     'token' => '',
 	'returnFormat' => 'array',
-	'endpointDomain' => 'https://api.yumpu.com/2.0/',
+	'endpointDomain' => 'http://api.yumpu.com/2.0/',
 	'endpointSearchDomain' => 'http://search.yumpu.com/2.0/',
 	'debug' => FALSE,
 	'useCurl' => TRUE,
