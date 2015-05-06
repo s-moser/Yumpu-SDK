@@ -595,6 +595,84 @@ class Yumpu {
         return $this->executeRequest($params);
     }
 
+
+    /**
+     * retrived all datas for the Access-Tag with id $id
+     * more details on: http://developers.yumpu.com/api/access-tags/get/
+     *
+     * @param array $data
+     *
+     * @return array|json
+     */
+    public function getAccessTag($data){
+        $params = array(
+            'action' => 'accessTag/get',
+            'data' => $data
+        );
+        return $this->executeRequest($params);
+    }
+
+
+    /**
+     * create a new access-tag
+     * An example of an update array is $data = array('name' => 'my-accesstag');
+     * more details on : http://developers.yumpu.com/api/access-tag/post/
+     *
+     * @param array $data - array with create collection info; name & description are required;
+     *
+     * @return array|json
+     */
+
+    public function postAccessTag($data){
+        $params = array(
+            'action' => 'accessTag/post',
+            'method' => 'POST',
+            'data' => $data
+        );
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * update a access-tag
+     * An example of an update array is $data = array('id' => 'collectionId', 'name' => 'mynewAccesTagName');
+     * more details on : http://developers.yumpu.com/api/access-tag/put/
+     *
+     * @param array $data - array with update collection info; id & name are required;
+     *
+     * @return array|json
+     */
+    public function putAccessTag($data){
+        $params = array(
+            'action' => 'accessTag/put',
+            'method' => 'POST',
+            'customRequest' => 'PUT',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * delete the access-tag with id value $id
+     * more details on: http://developers.yumpu.com/api/access-tag/delete/
+     *
+     * @param string $id
+     * @return array|json
+     */
+    public function deleteAccessTag($id){
+        $params = array(
+            'action' => 'accessTag/delete',
+            'data' => array(
+                'id' => $id,
+            ),
+            'method' => 'POST',
+            'customRequest' => 'DELETE'
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
     /**
      * retrieve all users' members datas
      * more details on: http://developers.yumpu.com/api/members/get/

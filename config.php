@@ -57,5 +57,9 @@ $config['yumpuEndpoints'] = array(
     'members/get' => $config['endpointDomain'].'account/members.json',
     'subscriptions/get' => $config['endpointDomain'].'account/subscriptions.json',
     'accessTags/get' => $config['endpointDomain'].'account/access_tags.json',
+    'accessTag/get' => $config['endpointDomain'].'account/access_tag.json',
+    'accessTag/put' => $config['endpointDomain'].'account/access_tag.json',
+    'accessTag/delete' => $config['endpointDomain'].'account/access_tag.json',
+    'accessTag/post' => $config['endpointDomain'].'account/access_tag.json',
 );
 ?>
