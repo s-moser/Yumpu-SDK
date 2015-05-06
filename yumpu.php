@@ -518,6 +518,83 @@ class Yumpu {
         return $this->executeRequest($params);
     }
 
+    /**
+     * retrived all datas for the Media with id $id
+     * more details on: http://developers.yumpu.com/api/media/get/
+     *
+     * @param array $data
+     *
+     * @return array|json
+     */
+    public function getMedia($data){
+        $params = array(
+            'action' => 'media/get',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * update a Media
+     * An example of an update array is $data = array('id' => 'mediaId', 'name' => 'myNewMediaName');
+     * more details on : http://developers.yumpu.com/api/media/put/
+     *
+     * @param array $data - array with update Media info; id is required;
+     *
+     * @return array|json
+     */
+    public function putMedia($data){
+        $params = array(
+            'action' => 'media/put',
+            'method' => 'POST',
+            'customRequest' => 'PUT',
+            'data' => $data
+        );
+         return $this->executeRequest($params);
+    }
+
+    /**
+     * delete the media with id value $id
+     * more details on: http://developers.yumpu.com/api/media/delete/
+     *
+     * @param string $id
+     * @return array|json
+     */
+    public function deleteMedia($id){
+        $params = array(
+            'action' => 'media/delete',
+            'data' => array(
+                'id' => $id,
+            ),
+            'method' => 'POST',
+            'customRequest' => 'DELETE'
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
+
+    /**
+     * create a new Media
+     * more details on : http://developers.yumpu.com/api/media/post/
+     *
+     * @param array $data - array with create Media info; file is required;
+     *
+     * @return array|json
+     */
+    public function postMedia($data) {
+
+        $params = array(
+            'action' => 'media/post',
+            'method' => 'POST',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
 
 	/** 
      * execute a CURL request to Yumpu
