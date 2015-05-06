@@ -49,6 +49,9 @@ $config['yumpuEndpoints'] = array(
 	'countries/get' => $config['endpointDomain'].'countries.json',
 	'languages/get' => $config['endpointDomain'].'document/languages.json',
 	'search/get' => $config['endpointSearchDomain'].'search.json',
-    'medias/get' => $config['endpointDomain'].'medias.json'
+    'medias/get' => $config['endpointDomain'].'medias.json',
+    'members/get' => $config['endpointDomain'].'account/members.json',
+    'subscriptions/get' => $config['endpointDomain'].'account/subscriptions.json',
+    'accessTags/get' => $config['endpointDomain'].'account/access_tags.json',
 );
 ?>

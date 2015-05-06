@@ -518,8 +518,60 @@ class Yumpu {
         return $this->executeRequest($params);
     }
 
+    /**
+     * retrieve all users' members datas
+     * more details on: http://developers.yumpu.com/api/members/get/
+     *
+     * @param array $data
+     *
+     * @return array|json
+     */
+    public function getMembers($data = array()){
+        $params = array(
+            'action' => 'members/get',
+            'data' => $data
+        );
 
-	/** 
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * retrieve all users' accessTags datas
+     * more details on: http://developers.yumpu.com/api/access-tags/get/
+     *
+     * @param array $data
+     *
+     * @return array|json
+     */
+    public function getAccessTags($data = array()){
+        $params = array(
+            'action' => 'accessTags/get',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * retrieve all users' subscriptions datas
+     * more details on: http://developers.yumpu.com/api/subscriptions/get/
+     *
+     * @param array $data
+     *
+     * @return array|json
+     */
+    public function getSubscriptions($data = array()){
+        $params = array(
+            'action' => 'subscriptions/get',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
+
+    /**
      * execute a CURL request to Yumpu
      * 
      * @param array $params. Required keys: token, method
