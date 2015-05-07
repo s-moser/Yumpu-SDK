@@ -715,6 +715,7 @@ class Yumpu {
     public function postMember($data) {
         $params = array(
             'action' => 'member/post',
+            'method' => 'POST',
             'data' => $data
         );
 
@@ -731,6 +732,8 @@ class Yumpu {
     public function putMember($data) {
         $params = array(
             'action' => 'member/put',
+            'method' => 'POST',
+            'customRequest' => 'PUT',
             'data' => $data
         );
 
@@ -741,13 +744,17 @@ class Yumpu {
      * delete member
      * more details on: http://developers.yumpu.com/api/member/delete/
      *
-     * @param array $data
+     * @param string $id
      * @return array|json
      */
-    public function deleteMember($data) {
+    public function deleteMember($id) {
         $params = array(
             'action' => 'member/delete',
-            'data' => $data
+            'data' => array(
+                'id' => $id,
+            ),
+            'method' => 'POST',
+            'customRequest' => 'DELETE'
         );
 
         return $this->executeRequest($params);
@@ -816,6 +823,7 @@ class Yumpu {
     public function postSubscription($data) {
         $params = array(
             'action' => 'subscription/post',
+            'method' => 'POST',
             'data' => $data
         );
 
@@ -832,6 +840,8 @@ class Yumpu {
     public function putSubscription($data) {
         $params = array(
             'action' => 'subscription/put',
+            'method' => 'POST',
+            'customRequest' => 'PUT',
             'data' => $data
         );
 
@@ -840,16 +850,20 @@ class Yumpu {
 
 
     /**
-     * delete subscription
+     * put subscription
      * more details on: http://developers.yumpu.com/api/subscription/delete/
      *
-     * @param array $data
+     * @param string $id
      * @return array|json
      */
-    public function deleteSubscription($data) {
+    public function deleteSubscription($id) {
         $params = array(
             'action' => 'subscription/delete',
-            'data' => $data
+            'data' => array(
+                'id' => $id,
+            ),
+            'method' => 'POST',
+            'customRequest' => 'DELETE'
         );
 
         return $this->executeRequest($params);
@@ -900,6 +914,7 @@ class Yumpu {
     public function postEmbed($data) {
         $params = array(
             'action' => 'embed/post',
+            'method' => 'POST',
             'data' => $data
         );
 
@@ -916,6 +931,8 @@ class Yumpu {
     public function putEmbed($data) {
         $params = array(
             'action' => 'embed/put',
+            'method' => 'POST',
+            'customRequest' => 'PUT',
             'data' => $data
         );
 
@@ -927,13 +944,17 @@ class Yumpu {
      * delete embed
      * more details on: http://developers.yumpu.com/api/embed/delete/
      *
-     * @param array $data
+     * @param string $id
      * @return array|json
      */
-    public function deleteEmbed($data) {
+    public function deleteEmbed($id) {
         $params = array(
             'action' => 'embed/delete',
-            'data' => $data
+            'data' => array(
+                'id' => $id,
+            ),
+            'method' => 'POST',
+            'customRequest' => 'DELETE'
         );
 
         return $this->executeRequest($params);
