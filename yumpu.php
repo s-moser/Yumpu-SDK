@@ -98,7 +98,7 @@ class Yumpu {
 
     /** 
      * get document details
-     * more details on: http://developers.yumpu.com/api/document/get-2/
+     * more details on: http://developers.yumpu.com/api/document/get/
 	 * 
      * @param array $data
      * @return array|json
@@ -725,6 +725,71 @@ class Yumpu {
     }
 
 
+    /**
+     * get subscription details
+     * more details on: http://developers.yumpu.com/api/subscription/get/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function getSubscription($data) {
+        $params = array(
+            'action' => 'subscription/get',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
+    /**
+     * post subscription
+     * more details on: http://developers.yumpu.com/api/subscription/post/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function postSubscription($data) {
+        $params = array(
+            'action' => 'subscription/post',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * put subscription
+     * more details on: http://developers.yumpu.com/api/subscription/put/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function putSubscription($data) {
+        $params = array(
+            'action' => 'subscription/put',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
+    /**
+     * put subscription
+     * more details on: http://developers.yumpu.com/api/subscription/delete/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function deleteSubscription($data) {
+        $params = array(
+            'action' => 'subscription/delete',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
 
     /**
      * execute a CURL request to Yumpu
