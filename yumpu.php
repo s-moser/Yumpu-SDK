@@ -691,6 +691,71 @@ class Yumpu {
     }
 
     /**
+     * get member details
+     * more details on: http://developers.yumpu.com/api/member/get/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function getMember($data) {
+        $params = array(
+            'action' => 'member/get',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * put member
+     * more details on: http://developers.yumpu.com/api/member/post/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function postMember($data) {
+        $params = array(
+            'action' => 'member/post',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * put member
+     * more details on: http://developers.yumpu.com/api/member/put/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function putMember($data) {
+        $params = array(
+            'action' => 'member/put',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * delete member
+     * more details on: http://developers.yumpu.com/api/member/delete/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function deleteMember($data) {
+        $params = array(
+            'action' => 'member/delete',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
+    /**
      * retrieve all users' accessTags datas
      * more details on: http://developers.yumpu.com/api/access-tags/get/
      *
