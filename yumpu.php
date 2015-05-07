@@ -840,7 +840,7 @@ class Yumpu {
 
 
     /**
-     * put subscription
+     * delete subscription
      * more details on: http://developers.yumpu.com/api/subscription/delete/
      *
      * @param array $data
@@ -867,6 +867,72 @@ class Yumpu {
     public function getEmbeds($data = array()){
         $params = array(
             'action' => 'embeds/get',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * get embed details
+     * more details on: http://developers.yumpu.com/api/embed/get/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function getEmbed($data) {
+        $params = array(
+            'action' => 'embed/get',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
+    /**
+     * post embed
+     * more details on: http://developers.yumpu.com/api/embed/post/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function postEmbed($data) {
+        $params = array(
+            'action' => 'embed/post',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+    /**
+     * put embed
+     * more details on: http://developers.yumpu.com/api/embed/put/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function putEmbed($data) {
+        $params = array(
+            'action' => 'embed/put',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
+    /**
+     * delete embed
+     * more details on: http://developers.yumpu.com/api/embed/delete/
+     *
+     * @param array $data
+     * @return array|json
+     */
+    public function deleteEmbed($data) {
+        $params = array(
+            'action' => 'embed/delete',
             'data' => $data
         );
 
