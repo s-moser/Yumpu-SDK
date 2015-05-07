@@ -68,6 +68,7 @@ $config['yumpuEndpoints'] = array(
     'member/get' => $config['endpointDomain'].'account/member.json',
     'member/put' => $config['endpointDomain'].'account/member.json',
     'member/delete' => $config['endpointDomain'].'account/member.json',
-    'member/post' => $config['endpointDomain'].'account/member.json'
+    'member/post' => $config['endpointDomain'].'account/member.json',
+    'embeds/get' => $config['endpointDomain'].'embeds.json'
 );
 ?>

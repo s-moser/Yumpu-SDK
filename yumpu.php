@@ -672,7 +672,6 @@ class Yumpu {
         return $this->executeRequest($params);
     }
 
-
     /**
      * retrieve all users' members datas
      * more details on: http://developers.yumpu.com/api/members/get/
@@ -850,6 +849,24 @@ class Yumpu {
     public function deleteSubscription($data) {
         $params = array(
             'action' => 'subscription/delete',
+            'data' => $data
+        );
+
+        return $this->executeRequest($params);
+    }
+
+
+    /**
+     * retrieve all users' embeds datas
+     * more details on: http://developers.yumpu.com/api/embeds/get/
+     *
+     * @param array $data
+     *
+     * @return array|json
+     */
+    public function getEmbeds($data = array()){
+        $params = array(
+            'action' => 'embeds/get',
             'data' => $data
         );
 
